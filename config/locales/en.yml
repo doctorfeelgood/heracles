@@ -20,4 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  welcome: "Welcome to Heracles"
+  menu:
+    dashboard: "Dashboard"
+    list: "List"
+    payments: 'Payments'
+    reports: 'Reports'
+    memberships: 'Memberships'
+    logout: 'Logout'

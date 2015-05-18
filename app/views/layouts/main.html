@@ -14,16 +14,19 @@
 		<div id='stripe'></div>
 		<div id='wrapper'>
 			<div id='header'>
-				<%#image_tag('gym-e_logobar.gif', :class => "float_left")%>
-				<%#image_tag('logo_300.png', :class => "float_left")%>
+				<%=image_tag('gym-e_logobar.gif', :class => "float_left")%>
+				<%=image_tag('logo_300.png', :class => "float_left")%>
 				<span id='welcome_user'><% if session[:access_granted] %>&nbsp; Bienvenido <%=session[:user].name.capitalize%> &nbsp; <%end%> </span>
 				<div id='menu_box'>
-					<a href=""<%#members_path%> class='menu_link'> <span class="glyphicon glyphicon-home" aria-hidden="true"></span> <%= t('menu.dashboard') %></a>
-					<a href="/attendances/today" class='menu_link' > <span class="glyphicon glyphicon-list" aria-hidden="true"></span> <%= t('menu.list') %></a>
-					<a href="" <%#memberships_path%> class='menu_link' > <span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> <%= t('menu.membership') %></a>
-					<a href="" <%#payments_path%> class='menu_link' ><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> <%= t('menu.payments') %></a>
-					<a href="" <%#payments_path%> class='menu_link' ><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> <%= t('menu.reports') %></a>
-					<a href='/sessions/logout'  class='menu_link' ><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> <%= t('menu.logout') %></a>
+					<a class="glyphicon glyphicon-search" aria-hidden="true"> Nuevp <a/>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'house.png'%>Dashboard</a>
+					<a href="/attendances/today" class='menu_link' ><%=image_tag 'list.png'%>Lista</a>
+					<a href=<%=memberships_path%> class='menu_link' ><%=image_tag 'group.png'%>Membres&iacute;as</a>
+					<a href=<%=payments_path%> class='menu_link' ><%=image_tag 'money.png'%>Pagos</a>
+					<a href=<%=rates_path%> class='menu_link' ><%=image_tag 'tag_blue.png'%>Tarifas</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'routines.png'%>Rutinas</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'excercises.png'%>Ejercicios</a>
+					<a href='/sessions/logout'  class='menu_link' ><%=image_tag 'door_out.png'%>Logout</a>
 				</div><!-- termina el menu box -->
 			</div><!--termina el header-->
 			<% session[:title]=(session[:title].blank? )? "Iniciar Sesi&oacute;n" : session[:title]%>
@@ -31,12 +34,12 @@
 			<div id='content'>
 				<% if flash[:notice] then %><div id="flash_notice"><%= flash[:notice] %></div><% end %>
 				<script type="text/javascript">
-				  <%# visual_effect(:fade, "flash_notice", :duration => 5)%>
+				  <%= visual_effect(:fade, "flash_notice", :duration => 5)%>
 				</script>
 
 				<% if flash[:error] then %><div id="flash_error"><%= flash[:error] %></div><% end %>
 				<script type="text/javascript">
-				  <%# visual_effect(:highlight, "flash_error", :duration => 5)%>
+				  <%= visual_effect(:highlight, "flash_error", :duration => 5)%>
 				</script>    
 				
 				<%= render 'shared/user_widget' %>
