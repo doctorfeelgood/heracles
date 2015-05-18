@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
 
 gem 'bootstrap-sass', '~> 3.3.4'
+gem 'devise'
 gem 'sprockets-rails'
 
 # Use Capistrano for deployment
