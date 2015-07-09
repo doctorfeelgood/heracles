@@ -26,7 +26,7 @@
 					<a href='/sessions/logout'  class='menu_link' ><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> <%= t('menu.logout') %></a>
 				</div><!-- termina el menu box -->
 			</div><!--termina el header-->
-			<% session[:title]=(session[:title].blank? )? "Iniciar Sesi&oacute;n" : session[:title]%>
+			<% session[:title]=(session[:title].blank? )? t('no_sesion_title') : session[:title]%>
 			<div id='title'><%=image_tag(session[:image])%><%=  session[:title]%> </div>
 			<div id='content'>
 				<% if flash[:notice] then %><div id="flash_notice"><%= flash[:notice] %></div><% end %>

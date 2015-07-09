@@ -28,3 +28,17 @@ en:
     reports: 'Reports'
     memberships: 'Memberships'
     logout: 'Logout'
+  forms:
+    submit: 'Submit'
+  roles:
+    form:
+      name: 'Name'
+  session:
+    membership_title: 'Memberships'
+    payments_title: 'Payments'
+    members_title: 'Members'
+    no_session_title: 'Please login'
+    users_title: 'Users'
+
+
+
